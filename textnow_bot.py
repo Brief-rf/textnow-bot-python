@@ -75,8 +75,6 @@ class AsyncTextNowBot(TextNowBot):
             await self.page.wait_for_load_state("networkidle")
 
             await self.page.context.add_cookies([PERMISSION_COOKIE])
-            print self.page.context.add_cookies(cookies)
-            print self.page.context.add_cookies([PERMISSION_COOKIE])
         else:
             raise Exception("missing account credentials")
 
